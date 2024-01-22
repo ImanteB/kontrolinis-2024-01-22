@@ -104,12 +104,12 @@ console.log("Ilgiausias maršrutas: " + ilgiausiasMarsrutas.marsrutas + " Išvyk
 
 function rastiIlgiauNeiPara(marsrutai) {
    let ilgiauNeiParaMarsrutai = marsrutai.filter(marsrutas => {
-       let trukme = marsrutas.marsrutoTrukme.split(':');
-       let trukmeValandos = parseInt(trukme[0]);
-       let trukmeMinutes = parseInt(trukme[1]);
-       let trukmeVisoMinutes = trukmeValandos * 60 + trukmeMinutes;
+      let trukme = marsrutas.marsrutoTrukme.split(':');
+      let trukmeValandos = parseInt(trukme[0]);
+      let trukmeMinutes = parseInt(trukme[1]);
+      let trukmeVisoMinutes = trukmeValandos * 60 + trukmeMinutes;
 
-       return trukmeVisoMinutes > 24 * 60; // 24 valandos * 60 minutes = 1 diena
+      return trukmeVisoMinutes > 24 * 60; // 24 valandos * 60 minutes = 1 diena
    });
 
    ilgiauNeiParaMarsrutai.forEach(marsrutas => {
